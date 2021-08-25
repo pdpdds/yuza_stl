@@ -9,8 +9,8 @@
 
 #include <ios_base>
 
-//namespace std
-//{
+namespace std
+{
 	class ios : public ios_base
 	{
 		public:
@@ -25,6 +25,6 @@
 
 		
 	};
-//};
+};
 
 #endif

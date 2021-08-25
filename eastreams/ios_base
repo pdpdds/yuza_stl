@@ -9,8 +9,8 @@
 #define _IOS_BASE_H
 #include <stdio.h>
 
-//namespace std
-//{
+namespace std
+{
 	typedef int streamsize;
 	static const char endl = '\n'; //Define newline character
 	const int MAX_SIZE_STD_STRING_IN_STREAM = 2048; //Limitation of library
@@ -57,6 +57,6 @@
 			streamsize _width;
 			
 	};
-//};
+};
 
 #endif
