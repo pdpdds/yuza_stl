@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{1f78a8e3-6214-410a-9923-f970e789747d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\allocator_eastl.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\assert.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\atomic.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\fixed_pool.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\hashtable.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\intrusive_list.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\numeric_limits.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\red_black_tree.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\string.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\thread_support.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dummy.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
