@@ -1,7 +1,7 @@
 #include <ios_base>
 
-//namespace std
-//{
+namespace std
+{
 
 //Sigh...another problem with eVC 4.0, initialization seperation from declaration
 
@@ -106,4 +106,4 @@ void ios_base::setf(fmtflags flag)
 	_fmtflags = flag;
 }
 
-//}; /*end namespace ppcStreams*/
+}; /*end namespace ppcStreams*/

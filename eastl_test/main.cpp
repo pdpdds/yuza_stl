@@ -21,12 +21,24 @@
 using namespace std;
 using namespace std::chrono;
 
+
+std::tuple<int, int, int, int> MakeSampleTuple(int a, int b)
+{
+	return std::make_tuple(a + b, a - b, a * b, a / b);
+}
+
 int Test_HashMap(void);
 void Test_Unorder_Map();
 void Test_Unorder_Map2();
 
 int main(int argc, char** argv)
 {
+	int add, sub, div;
+	std::tie(add, sub, std::ignore, div) = MakeSampleTuple(15, 18);
+
+	printf("%d, %d, %d\n", add, sub, div);
+
+
 	Test_HashMap();
 	Test_Unorder_Map();
 	Test_Unorder_Map2();

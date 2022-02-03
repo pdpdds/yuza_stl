@@ -1,8 +1,8 @@
 #include <ios>
 #include <stdio.h>
 
-//namespace std
-//{
+namespace std
+{
 /**************************************************************/
 ios::ios()
 /**************************************************************/
@@ -47,6 +47,6 @@ ios::operator void*()
 
 }
 
-//}; /*end namespace ppcStreams*/
+}; /*end namespace ppcStreams*/
 
 
