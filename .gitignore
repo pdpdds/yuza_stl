@@ -34,3 +34,5 @@
 Intermediate
 Debug
 *.bak
+Release
+x64
