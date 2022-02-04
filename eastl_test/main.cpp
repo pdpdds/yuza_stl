@@ -17,6 +17,8 @@
 #include <type_traits>
 #include <iterator>
 #include <winapi.h>
+#include <optional.h>
+#include <bitset.h>
 
 using namespace std;
 using namespace std::chrono;
@@ -31,6 +33,18 @@ int Test_HashMap(void);
 void Test_Unorder_Map();
 void Test_Unorder_Map2();
 
+std::optional<int> GetValue(bool flag)
+{
+	if (flag)
+	{
+		return 100;
+	}
+	else
+	{
+		return std::nullopt;
+	}
+}
+
 int main(int argc, char** argv)
 {
 	int add, sub, div;
@@ -42,6 +56,14 @@ int main(int argc, char** argv)
 	Test_HashMap();
 	Test_Unorder_Map();
 	Test_Unorder_Map2();
+
+	std::bitset<5> bits(6);
+	if (false == bits.test(0))
+	{
+		int j = 1;
+	}
+
+	auto value = GetValue(false).value_or(100);
 
 	return 0;
 }
