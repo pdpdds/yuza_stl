@@ -7,7 +7,7 @@
 
 
 #if EASTL_CUSTOM_FLOAT_CONSTANTS_REQUIRED
-	#include <limits> // See notes below about usage of this header.
+	
 
 	namespace std
 	{

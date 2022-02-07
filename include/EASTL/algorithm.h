@@ -1250,7 +1250,7 @@ namespace std
 		template <typename T>
 		static T* move_or_copy_backward(const T* first, const T* last, T* resultEnd)
 		{
-			return (T*)memmove(resultEnd - (last - first), first, (size_t)((uintptr_t)last - (uintptr_t)first));
+			return (T*)memmove(resultEnd - (last - first), (void*)first, (size_t)((uintptr_t)last - (uintptr_t)first));
 			// We could use memcpy here if there's no range overlap, but memcpy is rarely much faster than memmove.
 		}
 	};
