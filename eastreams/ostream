@@ -33,6 +33,8 @@ namespace std
 			virtual ostream& operator<<(void* var);
 			virtual ostream& operator<<(ostream& (*__pf)(ostream&));
 
+			int write(const char* s, int count);
+
 		protected:
 			virtual int OutFunction(const char* format, ...);
 

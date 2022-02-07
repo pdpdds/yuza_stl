@@ -57,9 +57,27 @@ istream& istream::getline(char* s, int streamsize, char delimiter)
 }
 
 /**************************************************************/
-istream& istream::getline(std::string& s, char delimiter)
+int istream::read(char* s, int streamsize)
 /**************************************************************/
 {
+	int ctr = 0;
+	char current;
+	do
+	{
+		istream& me = *this;
+		me >> current; //get single character off stream
+		s[ctr] = current;
+		ctr++;
+
+	} while ((!(eof())) && ctr < streamsize);
+
+	return ctr;
+}
+
+/**************************************************************/
+//istream& istream::getline(string& s, char delimiter)
+/**************************************************************/
+/*{
 	int ctr = 0;
 	char current; //embedded visual c++ 4.0 bug, can't disambiguate between char and char*
 	//TODO: This implementation gives bugs when using istringstring or stringstream.getline()
@@ -74,7 +92,7 @@ istream& istream::getline(std::string& s, char delimiter)
 
 
 	return (*this);
-}
+}*/
 
 /**************************************************************/
 template <typename T> istream& istream::operator>>(T &var)
@@ -102,7 +120,6 @@ template <typename T> istream& istream::operator>>(T &var)
 istream& istream::operator >>(char& c)
 /**************************************************************/
 {
-	//20201105
 	/*NOTE: If you want to skip spaces, uncomment follow loop*/
 	do
 	{
@@ -198,19 +215,20 @@ istream& istream::operator >>(unsigned short& us)
 }
 
 /**************************************************************/
-istream& istream::operator >>(std::string& s)
+//istream& istream::operator >>(string& s)
 /**************************************************************/
-{
+/*{
 	char buffer[MAX_SIZE_STD_STRING_IN_STREAM]; //The buffer size can't be known, max 2 K
 	InFunction("%s", buffer);
 	string temp(buffer);
 	s = buffer;
 	return (*this);
-}
+}*/
 
-/*
-istream::operator void*()
-{
+/**************************************************************/
+//istream::operator void*()
+/**************************************************************/
+/*{
 	
 	if (!(this->ios::operator void *()))
 		return false;

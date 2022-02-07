@@ -2248,8 +2248,8 @@ namespace std
 					const size_type nSavedSize = internalLayout().GetSize();
 					CharStringUninitializedCopy((internalLayout().EndPtr() - n) + 1, internalLayout().EndPtr() + 1, internalLayout().EndPtr() + 1);
 					internalLayout().SetSize(nSavedSize + n);
-					memmove(const_cast<value_type*>(p) + n, p, (size_t)((nElementsAfter - n) + 1) * sizeof(value_type));
-					memmove(const_cast<value_type*>(p), pBegin, (size_t)(n) * sizeof(value_type));
+					memmove(const_cast<value_type*>(p) + n, (void*)p, (size_t)((nElementsAfter - n) + 1) * sizeof(value_type));
+					memmove(const_cast<value_type*>(p), (void*)pBegin, (size_t)(n) * sizeof(value_type));
 				}
 				else
 				{
